@@ -4,14 +4,17 @@
     <title>Angular Test Setup</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
-<body ng-controller="BookCtrl">
+<body>
 
 
-<div ng-repeat="item in guides">
-    <h2>{{item.title}}</h2>
-    <p>{{item.type}}</p>
-    <p>{{item.price}}</p>
-</div>
+<h1>Sort Books By Type:</h1>
+<ul>
+    <li><a ng-href="#!/city">City</a></li>
+    <li><a ng-href="#!/country">Country</a></li>
+    <li><a ng-href="#!/region">Region</a></li>
+</ul>
+
+<div ng-view></div>
 
 
 
@@ -21,6 +24,9 @@
 <script src="lib/node_modules/angular/angular.js"></script>
 <script src="lib/node_modules/angular-route/angular-route.js"></script>
 <script src="app/app.js"></script>
-<script src="app/controllers/BookCtrl.js"></script>
+<script src="app/controllers/CityCtrl.js"></script>
+<script src="app/controllers/CountryCtrl.js"></script>
+<script src="app/controllers/RegionCtrl.js"></script>
+<script src="app/factories/GuideFactory.js"></script>
 </body>
 </html>
